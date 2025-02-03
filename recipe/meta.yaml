@@ -38,6 +38,8 @@ requirements:
     - brotli >=1.0.1
     # weasyprint attempts to load gobject & pango
     - pango
+    # fonts are needed on linux
+    - fontconfig      # [linux]
 
 # We need to skip a large number of tests because the test suite's reliance on GhostScript
 {% set tests_to_ignore = [
