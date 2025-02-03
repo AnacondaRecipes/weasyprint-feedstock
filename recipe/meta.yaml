@@ -51,6 +51,7 @@ requirements:
   'test_unicode',
   'test_font_stretch',
   'test_table_vertical_align',
+  'test_command_line_render',       # [linux]
 ] %}
 test:
   source_files:
