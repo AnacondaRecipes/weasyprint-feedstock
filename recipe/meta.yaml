@@ -38,6 +38,7 @@ requirements:
     - glib
     - pango
 
+# We need to skip a large number of tests because the test suite's reliance on GhostScript
 {% set tests_to_ignore = [
   'test_acid2',
   'test_python_render',
