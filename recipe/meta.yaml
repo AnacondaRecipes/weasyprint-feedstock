@@ -21,6 +21,8 @@ requirements:
     - pip
     - python
     - flit-core >=3.2,<4
+    # weasyprint attempts to load gobject & pango
+    - glib {{ glib }}
   run:
     - python
     - pydyf >=0.10.0
@@ -35,7 +37,6 @@ requirements:
     - zopfli >=0.1.4
     - brotli >=1.0.1
     # weasyprint attempts to load gobject & pango
-    - glib
     - pango
 
 # We need to skip a large number of tests because the test suite's reliance on GhostScript
