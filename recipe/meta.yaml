@@ -40,6 +40,7 @@ requirements:
     - pango
     # fonts are needed on linux
     - fontconfig      # [linux]
+    - harfbuzz      # [linux]
 
 # We need to skip a large number of tests because the test suite's reliance on GhostScript
 {% set tests_to_ignore = [
