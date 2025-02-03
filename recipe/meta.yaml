@@ -34,12 +34,9 @@ requirements:
     - fonttools >=4.0.0
     - zopfli >=0.1.4
     - brotli >=1.0.1
-    # weasyprint attempts to load gobject, pango,
-    # harfbuzz, fontconfig, pangoft
+    # weasyprint attempts to load gobject & pango
     - glib
     - pango
-    - harfbuzz
-    - fontconfig
 
 {% set tests_to_ignore = [
   'test_acid2',
