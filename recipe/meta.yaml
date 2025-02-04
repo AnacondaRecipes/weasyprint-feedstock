@@ -11,6 +11,8 @@ source:
 
 build:
   skip: True    # [py<39]
+  # pangoft is missing from our pango package on win
+  skip: True    # [win]
   number: 0
   entry_points:
     - weasyprint = weasyprint.__main__:main
@@ -42,6 +44,7 @@ requirements:
     - font-ttf-ubuntu # [linux]
 
 # We need to skip a large number of tests because the test suite's reliance on GhostScript
+# Additional tests fail on linux for unknown reasons
 {% set tests_to_ignore = [
   'test_acid2',
   'test_python_render',
@@ -53,7 +56,6 @@ requirements:
   'test_unicode',
   'test_font_stretch',
   'test_table_vertical_align',
-  # Additional tests fail on linux
   'test_woff_simple',             # [linux]
   'test_line_content',            # [linux]
   'test_line_breaking',           # [linux]
