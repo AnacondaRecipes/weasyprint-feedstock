@@ -53,7 +53,14 @@ requirements:
   'test_unicode',
   'test_font_stretch',
   'test_table_vertical_align',
-  'test_command_line_render',       # [linux]
+  # Additional tests fail on linux
+  'test_woff_simple',             # [linux]
+  'test_line_content',            # [linux]
+  'test_line_breaking',           # [linux]
+  'test_letter_spacing_1',        # [linux]
+  'test_breaking_linebox',        # [linux]
+  'test_linebox_text',            # [linux]
+  'test_linebox_positions',       # [linux]
 ] %}
 test:
   source_files:
@@ -64,7 +71,7 @@ test:
   commands:
     - pip check
     - weasyprint --help
-    #- pytest -vv --ignore=tests/draw -k "not ({{ tests_to_ignore|join(' or ') }})"
+    - pytest -vv --ignore=tests/draw -k "not ({{ tests_to_ignore|join(' or ') }})"
   requires:
     - pip
     - pytest
