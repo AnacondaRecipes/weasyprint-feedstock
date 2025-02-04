@@ -39,8 +39,8 @@ requirements:
     # weasyprint attempts to load gobject & pango
     - pango
     # fonts are needed on linux
-    - fontconfig      # [linux]
-    - harfbuzz      # [linux]
+    #- fontconfig      # [linux]
+    #- harfbuzz      # [linux]
     - font-ttf-ubuntu # [linux]
 
 # We need to skip a large number of tests because the test suite's reliance on GhostScript
