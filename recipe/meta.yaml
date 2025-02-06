@@ -36,8 +36,6 @@ requirements:
     - pillow >=9.1.0
     # fonttools[woof]
     - fonttools >=4.0.0
-    #- zopfli >=0.1.4
-    #- brotli >=1.0.1
     # weasyprint attempts to load gobject & pango
     - pango
     # fonts are needed on linux
