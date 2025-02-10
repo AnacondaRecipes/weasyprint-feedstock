@@ -24,6 +24,7 @@ requirements:
     - python
     - flit-core >=3.2,<4
     # weasyprint attempts to load gobject & pango
+    # See issue https://github.com/conda-forge/weasyprint-feedstock/issues/23
     - glib {{ glib }}
   run:
     - python
